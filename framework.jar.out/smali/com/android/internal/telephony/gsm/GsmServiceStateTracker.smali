@@ -1469,17 +1469,14 @@
 
     if-ne v2, v10, :cond_2
 
-    .line 3411
     :cond_1
     iget v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mLuRejCause:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 3418
     :pswitch_0
-    const v0, 0x10406bb
+    const v0, #android:string@lockscreen_searching#t
 
-    .line 3423
     :cond_2
     :goto_0
     const-string v2, "ATT"
@@ -1509,32 +1506,25 @@
 
     if-ne v2, v10, :cond_8
 
-    .line 3426
     :cond_3
     iget v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mLuRejCause:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 3467
-    const v0, 0x10403e0
+    const v0, #android:string@lockscreen_carrier_default#t
 
-    .line 3483
     :cond_4
     :goto_1
     return v0
 
-    .line 3415
     :pswitch_1
-    const v0, 0x10406ba
+    const v0, #android:string@lockscreen_carrier_noservice#t
 
-    .line 3416
     goto :goto_0
 
-    .line 3428
     :sswitch_0
-    const v0, 0x10406b6
+    const v0, #android:string@lockscreen_carrier_rejcasue_MM2#t
 
-    .line 3429
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1556,16 +1546,13 @@
 
     invoke-virtual {p0, v2, v7, v8}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3433
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->showDeniedDialog(I)V
 
     goto :goto_1
 
-    .line 3438
     :sswitch_1
-    const v0, 0x10406b7
+    const v0, #android:string@lockscreen_carrier_rejcasue_MM3#t
 
-    .line 3439
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1587,16 +1574,13 @@
 
     invoke-virtual {p0, v2, v7, v8}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3443
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->showDeniedDialog(I)V
 
     goto :goto_1
 
-    .line 3448
     :sswitch_2
-    const v0, 0x10406b8
+    const v0, #android:string@lockscreen_carrier_rejcasue_MM6#t
 
-    .line 3449
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1618,19 +1602,15 @@
 
     invoke-virtual {p0, v2, v7, v8}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3453
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->showDeniedDialog(I)V
 
     goto :goto_1
 
-    .line 3458
     :sswitch_3
-    const v0, 0x10406b9
+    const v0, #android:string@lockscreen_auth_reject#t
 
-    .line 3459
     goto :goto_1
 
-    .line 3470
     :cond_8
     iget v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRilRegState:I
 
@@ -1640,16 +1620,13 @@
 
     if-nez v2, :cond_4
 
-    .line 3471
     :cond_9
     iget v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mLuRejCause:I
 
-    .line 3474
-    const v0, 0x10403e0
+    const v0, #android:string@lockscreen_carrier_default#t
 
     goto :goto_1
 
-    .line 3411
     nop
 
     :pswitch_data_0
@@ -2810,7 +2787,7 @@
 
     iget-object v13, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mNotification:Landroid/app/Notification;
 
-    const v14, 0x1080a68
+    const v14, #android:drawable@APKTOOL_DUMMY_0a68#t
 
     iput v14, v13, Landroid/app/Notification;->icon:I
 
@@ -2834,7 +2811,7 @@
 
     iget-object v13, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mNotification:Landroid/app/Notification;
 
-    const v14, 0x1080a67
+    const v14, #android:drawable@APKTOOL_DUMMY_0a67#t
 
     iput v14, v13, Landroid/app/Notification;->icon:I
 
@@ -8139,26 +8116,22 @@
 
     iput-wide v7, v6, Landroid/app/Notification;->when:J
 
-    .line 3291
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mNotification:Landroid/app/Notification;
 
     const/16 v7, 0x10
 
     iput v7, v6, Landroid/app/Notification;->flags:I
 
-    .line 3292
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mNotification:Landroid/app/Notification;
 
-    const v7, 0x108008a
+    const v7, #android:drawable@stat_sys_warning#t
 
     iput v7, v6, Landroid/app/Notification;->icon:I
 
-    .line 3293
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 3294
     .local v2, intent:Landroid/content/Intent;
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mNotification:Landroid/app/Notification;
 
@@ -8177,7 +8150,7 @@
 
     .line 3298
     .local v1, details:Ljava/lang/CharSequence;
-    const v6, 0x104011d
+    const v6, #android:string@RestrictedChangedTitle#t
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -8257,39 +8230,31 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 3333
     :cond_0
     invoke-virtual {v4, v3}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 3338
     :goto_1
     return-void
 
-    .line 3303
     .end local v4           #notificationManager:Landroid/app/NotificationManager;
     :pswitch_1
     const/16 v3, 0x378
 
-    .line 3304
-    const v6, 0x104011e
+    const v6, #android:string@RestrictedOnData#t
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 3305
     goto :goto_0
 
-    .line 3307
     :pswitch_2
     const/16 v3, 0x378
 
-    .line 3308
     goto :goto_0
 
-    .line 3310
     :pswitch_3
-    const v6, 0x1040121
+    const v6, #android:string@RestrictedOnAllVoice#t
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -8300,7 +8265,7 @@
 
     .line 3313
     :pswitch_4
-    const v6, 0x1040120
+    const v6, #android:string@RestrictedOnNormal#t
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -8311,7 +8276,7 @@
 
     .line 3316
     :pswitch_5
-    const v6, 0x104011f
+    const v6, #android:string@RestrictedOnEmergency#t
 
     invoke-virtual {v0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -10449,35 +10414,29 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 3509
     .local v0, builder:Landroid/app/AlertDialog$Builder;
-    const v1, 0x1040014
+    const v1, #android:string@dialog_alert_title#t
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 3510
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 3511
-    const v1, 0x104000a
+    const v1, #android:string@ok#t
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->onDenidedDialogClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 3512
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 3514
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
     sput-object v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->deniedDialog:Landroid/app/AlertDialog;
 
-    .line 3516
     sget-object v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->deniedDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
@@ -10534,7 +10493,7 @@
 
     .line 3570
     .local v0, builder:Landroid/app/AlertDialog$Builder;
-    const v2, 0x10406bc
+    const v2, #android:string@rescan_network#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -10542,8 +10501,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 3571
-    const v2, 0x104000a
+    const v2, #android:string@ok#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -10553,8 +10511,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 3573
-    const/high16 v2, 0x104
+    const/high16 v2, #android:string@cancel#h
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -10698,9 +10655,9 @@
     .parameter "plmnValue"
 
     .prologue
-    const v6, 0x10406dc
+    const v6, #android:string@cu_operator_name#t
 
-    const v5, 0x10406db
+    const v5, #android:string@cmcc_operator_name#t
 
     .line 3673
     move-object v1, p1
@@ -11035,7 +10992,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406dd
+    const v4, #android:string@chunghwa_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -11062,7 +11019,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406de
+    const v4, #android:string@fareastone_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -11089,7 +11046,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406df
+    const v4, #android:string@kgt_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -11116,7 +11073,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406e0
+    const v4, #android:string@vibo_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -11160,7 +11117,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406e1
+    const v4, #android:string@twmobile_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -11217,7 +11174,7 @@
 
     move-result-object v3
 
-    const v4, 0x10406e3
+    const v4, #android:string@cmhk_operator_name#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -12368,7 +12325,7 @@
 
     move-result-object v22
 
-    const v23, 0x111002f
+    const v23, #android:bool@skip_restoring_network_selection#t
 
     invoke-virtual/range {v22 .. v23}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -15810,7 +15767,7 @@
 
     move-result-object v19
 
-    const v20, 0x1040404
+    const v20, #android:string@emergency_calls_only#t
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -16233,7 +16190,7 @@
 
     move-result-object v19
 
-    const v20, 0x1040404
+    const v20, #android:string@emergency_calls_only#t
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

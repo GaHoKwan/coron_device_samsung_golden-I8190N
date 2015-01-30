@@ -164,7 +164,7 @@
 
     .line 281
     .local v0, bm:Landroid/graphics/Bitmap;
-    invoke-static {v0, v6, v3}, Landroid/app/WallpaperManager;->generateBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v6, v3}, Landroid/app/WallpaperManager$BaiduInjector;->generateBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
@@ -523,7 +523,7 @@
 
     move-result-object v19
 
-    const v20, 0x108023a
+    const v20, #android:drawable@default_wallpaper#t
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 

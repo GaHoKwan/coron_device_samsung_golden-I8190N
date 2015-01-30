@@ -10510,13 +10510,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3114
     .end local v8           #rInfo:Landroid/content/pm/ResolveInfo;
     .local v6, aInfo:Landroid/content/pm/ActivityInfo;
     :goto_0
     if-eqz v6, :cond_2
 
-    .line 3119
+    iget-object v0, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-static {v0, v6, p1, p6}, Lcom/android/server/am/BaiduActivityInjector;->hookStartActivity(Lcom/android/server/am/ActivityManagerService;Landroid/content/pm/ActivityInfo;Landroid/content/Intent;I)Landroid/content/pm/ActivityInfo;
+
+    move-result-object v6
+
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, v6, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -12308,20 +12312,16 @@
 
     move-result-object v1
 
-    .line 957
     .local v1, res:Landroid/content/res/Resources;
     iget v2, p0, Lcom/android/server/am/ActivityStack;->mThumbnailWidth:I
 
-    .line 958
     .local v2, w:I
     iget v0, p0, Lcom/android/server/am/ActivityStack;->mThumbnailHeight:I
 
-    .line 959
     .local v0, h:I
     if-gez v2, :cond_2
 
-    .line 960
-    const v4, 0x1050002
+    const v4, #android:dimen@thumbnail_width#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -12329,8 +12329,7 @@
 
     iput v2, p0, Lcom/android/server/am/ActivityStack;->mThumbnailWidth:I
 
-    .line 962
-    const v4, 0x1050001
+    const v4, #android:dimen@thumbnail_height#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -12947,18 +12946,14 @@
     .parameter "outActivity"
 
     .prologue
-    .line 2446
     const/16 v26, 0x0
 
-    .line 2448
     .local v26, err:I
     const/16 v22, 0x0
 
-    .line 2449
     .local v22, callerApp:Lcom/android/server/am/ProcessRecord;
     if-eqz p1, :cond_0
 
-    .line 2450
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -13343,23 +13338,18 @@
 
     if-eqz v42, :cond_11
 
-    .line 2580
     if-ltz p7, :cond_10
 
-    .line 2581
     invoke-static/range {p11 .. p11}, Landroid/app/ActivityOptions;->abort(Landroid/os/Bundle;)V
 
-    .line 2582
     const/4 v3, -0x3
 
-    .line 2718
     .end local v5           #resultRecord:Lcom/android/server/am/ActivityRecord;
     .end local v33           #launchFlags:I
     .end local v42           #sourceRecord:Lcom/android/server/am/ActivityRecord;
     :goto_6
     return v3
 
-    .line 2455
     .end local v23           #cmp:Landroid/content/ComponentName;
     .end local v37           #oldPolicy:Landroid/os/StrictMode$ThreadPolicy;
     :cond_6

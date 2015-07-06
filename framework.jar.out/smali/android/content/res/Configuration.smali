@@ -320,6 +320,10 @@
 
     or-int/2addr v0, v1
 
+    const/high16 v1, -0x8000
+
+    or-int/2addr v0, v1
+
     and-int/2addr v0, p0
 
     if-eqz v0, :cond_0
@@ -653,6 +657,10 @@
 
     if-eqz v2, :cond_0
 
+    invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$BaiduInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
     goto/16 :goto_0
 .end method
 
@@ -939,6 +947,10 @@
     or-int/2addr v0, v1
 
     :cond_12
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$BaiduInjector;->multiTheme_dealThemeChange2(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     return v0
 .end method
 
@@ -1125,6 +1137,10 @@
     iget v2, p0, Landroid/content/res/Configuration;->arrange:I
 
     add-int v0, v1, v2
+
+    invoke-static {p0, v0}, Landroid/content/res/Configuration$BaiduInjector;->hashCode(Landroid/content/res/Configuration;I)I
+
+    move-result v0
 
     return v0
 
@@ -1393,6 +1409,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->readFromParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
+
     return-void
 
     :cond_1
@@ -1513,6 +1531,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->setThemeChanged(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
@@ -1575,6 +1595,8 @@
     sget v0, Landroid/content/res/Configuration;->sArrangeMode:I
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$BaiduInjector;->setThemeChangedToDefault(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -2742,6 +2764,10 @@
     iput v1, p0, Landroid/content/res/Configuration;->arrange:I
 
     :cond_19
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$BaiduInjector;->multiTheme_dealThemeChange(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     return v0
 
     :cond_1a
@@ -2861,6 +2887,8 @@
     iget v0, p0, Landroid/content/res/Configuration;->arrange:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
 
     return-void
 

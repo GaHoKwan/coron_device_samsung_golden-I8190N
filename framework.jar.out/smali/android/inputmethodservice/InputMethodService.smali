@@ -1888,6 +1888,8 @@
 
     invoke-direct {p0}, Landroid/inputmethodservice/InputMethodService;->sendInputViewShownState()V
 
+    invoke-static/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$BaiduInjector;->broadcastImeHide(Landroid/inputmethodservice/InputMethodService;)V
+
     return-void
 .end method
 

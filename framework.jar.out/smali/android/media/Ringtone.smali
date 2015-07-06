@@ -884,6 +884,18 @@
     goto :goto_2
 .end method
 
+.method public setUri(Landroid/net/Uri;)V
+    .locals 0
+    .parameter "uri"
+
+    .prologue
+    .line 175
+    invoke-virtual {p0, p1}, Landroid/media/Ringtone;->setUri(Landroid/net/Uri;)Z
+
+    .line 210
+    return-void
+.end method
+
 .method public setVolume(FF)V
     .locals 1
     .parameter "rightVol"

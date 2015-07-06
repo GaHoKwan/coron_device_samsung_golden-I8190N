@@ -30,8 +30,6 @@
 
 .field public static final enum BluetoothSCOStream:Landroid/view/VolumePanel$StreamResources;
 
-.field public static final enum FMStream:Landroid/view/VolumePanel$StreamResources;
-
 .field public static final enum MasterStream:Landroid/view/VolumePanel$StreamResources;
 
 .field public static final enum MediaStream:Landroid/view/VolumePanel$StreamResources;
@@ -41,10 +39,6 @@
 .field public static final enum RemoteStream:Landroid/view/VolumePanel$StreamResources;
 
 .field public static final enum RingerStream:Landroid/view/VolumePanel$StreamResources;
-
-.field public static final enum SystemStream:Landroid/view/VolumePanel$StreamResources;
-
-.field public static final enum VideoCallStream:Landroid/view/VolumePanel$StreamResources;
 
 .field public static final enum VoiceStream:Landroid/view/VolumePanel$StreamResources;
 
@@ -66,17 +60,17 @@
     .locals 15
 
     .prologue
-    const/4 v14, 0x3
+    const/4 v14, 0x4
 
-    const/4 v13, 0x2
+    const/4 v13, 0x3
 
-    const v12, #android:drawable@ic_audio_phone#t
+    const/4 v12, 0x2
 
     const/4 v11, 0x1
 
     const/4 v2, 0x0
 
-    .line 168
+    .line 127
     new-instance v0, Landroid/view/VolumePanel$StreamResources;
 
     const-string v1, "BluetoothSCOStream"
@@ -95,12 +89,12 @@
 
     sput-object v0, Landroid/view/VolumePanel$StreamResources;->BluetoothSCOStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 173
+    .line 132
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "RingerStream"
 
-    const v7, #android:string@volumepanel_ringtone#t
+    const v7, #android:string@volume_icon_description_ringer#t
 
     const v8, #android:drawable@ic_audio_ring_notif#t
 
@@ -108,7 +102,7 @@
 
     move v5, v11
 
-    move v6, v13
+    move v6, v12
 
     move v10, v2
 
@@ -116,20 +110,20 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->RingerStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 178
+    .line 137
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "VoiceStream"
 
     const v7, #android:string@volume_icon_description_incall#t
 
-    move v5, v13
+    const v8, #android:drawable@ic_audio_phone#t
+
+    const v9, #android:drawable@ic_audio_phone#t
+
+    move v5, v12
 
     move v6, v2
-
-    move v8, v12
-
-    move v9, v12
 
     move v10, v2
 
@@ -137,12 +131,10 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->VoiceStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 183
+    .line 142
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "AlarmStream"
-
-    const/4 v6, 0x4
 
     const v7, #android:string@volume_alarm#t
 
@@ -150,7 +142,9 @@
 
     const v9, #android:drawable@ic_audio_alarm_mute#t
 
-    move v5, v14
+    move v5, v13
+
+    move v6, v14
 
     move v10, v2
 
@@ -158,20 +152,20 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->AlarmStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 188
+    .line 147
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "MediaStream"
 
-    const/4 v5, 0x4
-
-    const v7, #android:string@volumepanel_media#t
+    const v7, #android:string@volume_icon_description_media#t
 
     const v8, #android:drawable@ic_audio_vol#t
 
     const v9, #android:drawable@ic_audio_vol_mute#t
 
-    move v6, v14
+    move v5, v14
+
+    move v6, v13
 
     move v10, v11
 
@@ -179,7 +173,7 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->MediaStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 193
+    .line 152
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "NotificationStream"
@@ -188,7 +182,7 @@
 
     const/4 v6, 0x5
 
-    const v7, #android:string@volumepanel_notification#t
+    const v7, #android:string@volume_icon_description_notification#t
 
     const v8, #android:drawable@ic_audio_notification#t
 
@@ -200,7 +194,7 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->NotificationStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 199
+    .line 158
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "MasterStream"
@@ -221,7 +215,7 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->MasterStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 204
+    .line 163
     new-instance v3, Landroid/view/VolumePanel$StreamResources;
 
     const-string v4, "RemoteStream"
@@ -242,71 +236,8 @@
 
     sput-object v3, Landroid/view/VolumePanel$StreamResources;->RemoteStream:Landroid/view/VolumePanel$StreamResources;
 
-    .line 210
-    new-instance v3, Landroid/view/VolumePanel$StreamResources;
-
-    const-string v4, "FMStream"
-
-    const/16 v5, 0x8
-
-    const/16 v6, 0xa
-
-    const v7, #android:string@volumepanel_media#t
-
-    const v8, #android:drawable@ic_audio_vol#t
-
-    const v9, #android:drawable@ic_audio_vol_mute#t
-
-    move v10, v2
-
-    invoke-direct/range {v3 .. v10}, Landroid/view/VolumePanel$StreamResources;-><init>(Ljava/lang/String;IIIIIZ)V
-
-    sput-object v3, Landroid/view/VolumePanel$StreamResources;->FMStream:Landroid/view/VolumePanel$StreamResources;
-
-    .line 215
-    new-instance v3, Landroid/view/VolumePanel$StreamResources;
-
-    const-string v4, "VideoCallStream"
-
-    const/16 v5, 0x9
-
-    const/16 v6, 0xb
-
-    const v7, #android:string@volume_icon_description_incall#t
-
-    move v8, v12
-
-    move v9, v12
-
-    move v10, v2
-
-    invoke-direct/range {v3 .. v10}, Landroid/view/VolumePanel$StreamResources;-><init>(Ljava/lang/String;IIIIIZ)V
-
-    sput-object v3, Landroid/view/VolumePanel$StreamResources;->VideoCallStream:Landroid/view/VolumePanel$StreamResources;
-
-    .line 221
-    new-instance v3, Landroid/view/VolumePanel$StreamResources;
-
-    const-string v4, "SystemStream"
-
-    const/16 v5, 0xa
-
-    const v7, #android:string@volumepanel_system#t
-
-    const v8, #android:drawable@ic_audio_system#t
-
-    const v9, #android:drawable@ic_audio_system_mute#t
-
-    move v6, v11
-
-    move v10, v2
-
-    invoke-direct/range {v3 .. v10}, Landroid/view/VolumePanel$StreamResources;-><init>(Ljava/lang/String;IIIIIZ)V
-
-    sput-object v3, Landroid/view/VolumePanel$StreamResources;->SystemStream:Landroid/view/VolumePanel$StreamResources;
-
-    .line 167
-    const/16 v0, 0xb
+    .line 126
+    const/16 v0, 0x8
 
     new-array v0, v0, [Landroid/view/VolumePanel$StreamResources;
 
@@ -320,17 +251,15 @@
 
     sget-object v1, Landroid/view/VolumePanel$StreamResources;->VoiceStream:Landroid/view/VolumePanel$StreamResources;
 
-    aput-object v1, v0, v13
+    aput-object v1, v0, v12
 
     sget-object v1, Landroid/view/VolumePanel$StreamResources;->AlarmStream:Landroid/view/VolumePanel$StreamResources;
 
+    aput-object v1, v0, v13
+
+    sget-object v1, Landroid/view/VolumePanel$StreamResources;->MediaStream:Landroid/view/VolumePanel$StreamResources;
+
     aput-object v1, v0, v14
-
-    const/4 v1, 0x4
-
-    sget-object v2, Landroid/view/VolumePanel$StreamResources;->MediaStream:Landroid/view/VolumePanel$StreamResources;
-
-    aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
@@ -347,24 +276,6 @@
     const/4 v1, 0x7
 
     sget-object v2, Landroid/view/VolumePanel$StreamResources;->RemoteStream:Landroid/view/VolumePanel$StreamResources;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x8
-
-    sget-object v2, Landroid/view/VolumePanel$StreamResources;->FMStream:Landroid/view/VolumePanel$StreamResources;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x9
-
-    sget-object v2, Landroid/view/VolumePanel$StreamResources;->VideoCallStream:Landroid/view/VolumePanel$StreamResources;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xa
-
-    sget-object v2, Landroid/view/VolumePanel$StreamResources;->SystemStream:Landroid/view/VolumePanel$StreamResources;
 
     aput-object v2, v0, v1
 
@@ -389,25 +300,25 @@
     .end annotation
 
     .prologue
-    .line 234
+    .line 176
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 235
+    .line 177
     iput p3, p0, Landroid/view/VolumePanel$StreamResources;->streamType:I
 
-    .line 236
+    .line 178
     iput p4, p0, Landroid/view/VolumePanel$StreamResources;->descRes:I
 
-    .line 237
+    .line 179
     iput p5, p0, Landroid/view/VolumePanel$StreamResources;->iconRes:I
 
-    .line 238
+    .line 180
     iput p6, p0, Landroid/view/VolumePanel$StreamResources;->iconMuteRes:I
 
-    .line 239
+    .line 181
     iput-boolean p7, p0, Landroid/view/VolumePanel$StreamResources;->show:Z
 
-    .line 240
+    .line 182
     return-void
 .end method
 
@@ -416,7 +327,7 @@
     .parameter "name"
 
     .prologue
-    .line 167
+    .line 126
     const-class v0, Landroid/view/VolumePanel$StreamResources;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -432,7 +343,7 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 126
     sget-object v0, Landroid/view/VolumePanel$StreamResources;->$VALUES:[Landroid/view/VolumePanel$StreamResources;
 
     invoke-virtual {v0}, [Landroid/view/VolumePanel$StreamResources;->clone()Ljava/lang/Object;

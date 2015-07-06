@@ -108,6 +108,16 @@
     .locals 6
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/NotificationManagerService$SettingsObserver;->updateHook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     const/4 v3, 0x1
 
     const/4 v4, 0x0

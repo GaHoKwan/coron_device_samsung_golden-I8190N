@@ -23,15 +23,11 @@
 
 .field iconRes:I
 
-.field seekbarView:Landroid/widget/ExtSeekBar;
+.field seekbarView:Landroid/widget/SeekBar;
 
 .field streamType:I
 
 .field final synthetic this$0:Landroid/view/VolumePanel;
-
-.field underDivider:Landroid/widget/ImageView;
-
-.field volTitle:Landroid/widget/TextView;
 
 
 # direct methods
@@ -40,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 259
+    .line 198
     iput-object p1, p0, Landroid/view/VolumePanel$StreamControl;->this$0:Landroid/view/VolumePanel;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +50,7 @@
     .parameter "x1"
 
     .prologue
-    .line 259
+    .line 198
     invoke-direct {p0, p1}, Landroid/view/VolumePanel$StreamControl;-><init>(Landroid/view/VolumePanel;)V
 
     return-void

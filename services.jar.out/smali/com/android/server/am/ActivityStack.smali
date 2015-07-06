@@ -12946,6 +12946,20 @@
     .parameter "outActivity"
 
     .prologue
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-boolean v3, v3, Lcom/android/server/am/ActivityManagerService;->mSystemReady:Z
+
+    if-nez v3, :cond_baidu_0
+
+    const/4 v3, 0x0
+
+    goto/16 :goto_baidu_0
+
+    :cond_baidu_0
+
     const/16 v26, 0x0
 
     .local v26, err:I
@@ -13348,6 +13362,7 @@
     .end local v33           #launchFlags:I
     .end local v42           #sourceRecord:Lcom/android/server/am/ActivityRecord;
     :goto_6
+    :goto_baidu_0
     return v3
 
     .end local v23           #cmp:Landroid/content/ComponentName;

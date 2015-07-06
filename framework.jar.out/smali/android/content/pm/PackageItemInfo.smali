@@ -435,7 +435,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0, p1}, Landroid/content/pm/PackageItemInfo;->loadDefaultIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1}, Landroid/content/pm/PackageItemInfo;->loadDefaultIconHook(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 

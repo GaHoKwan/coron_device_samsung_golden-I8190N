@@ -340,6 +340,15 @@
     #setter for: Lcom/android/server/NotificationManagerService;->mScreenOn:Z
     invoke-static {v11, v12}, Lcom/android/server/NotificationManagerService;->access$1302(Lcom/android/server/NotificationManagerService;Z)Z
 
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
+
+    #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
+    invoke-static {v1}, Lcom/android/server/NotificationManagerService;->access$1500(Lcom/android/server/NotificationManagerService;)V
+
+    goto :goto_3
+    
     const-string v11, "STATUSBAR-NotificationService"
 
     const-string v12, "ACTION_SCREEN_OFF"

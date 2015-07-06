@@ -16592,18 +16592,6 @@
     return-void
 .end method
 
-.method public canGlobalActionsShow()Z
-    .locals 1
-
-    .prologue
-    .line 5836
-    invoke-static {}, Lcom/android/server/pm/ShutdownThread;->canGlobalActionsShow()Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method checkCallingPermission(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
     .parameter "permission"
@@ -29446,22 +29434,6 @@
     return-void
 .end method
 
-.method public rebootSafeMode()V
-    .locals 3
-
-    .prologue
-    .line 5819
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
-
-    const-string v1, "GlobalActions restart"
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/android/server/pm/ShutdownThread;->rebootSafeMode(Landroid/content/Context;Ljava/lang/String;Z)V
-
-    .line 5820
-    return-void
-.end method
 
 .method final rebuildAppWindowListLocked()V
     .locals 15

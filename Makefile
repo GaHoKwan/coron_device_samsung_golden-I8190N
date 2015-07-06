@@ -33,7 +33,7 @@ RESOLUTION := 480x800
 # If the boot.img or recovery.img exists, the system of build will use a prebuilt boot.img or recovery.img.
 # If the boot.img or recovery.img doesn't exists, the system of build will do nothing.
 #-----------------------------------------------------------------------------
-#vendor_modify_images := boot
+vendor_modify_images := boot
 
 ##############################################################################
 # The value decides the directory which you want to remove in the vendor directory for the ota package.
@@ -54,7 +54,7 @@ vendor_remove_files := etc/PowerOn.wav media/audio/ui/PowerOn.ogg media/bootsams
 # The default value is Bluetooth.
 # You can configure the apk name in the vendor/system/app or vendor/system/pri-app directory.
 #-----------------------------------------------------------------------------
-vendor_saved_apps := BluetoothAvrcp BluetoothMap BluetoothTest SecBluetooth MtpApplication
+vendor_saved_apps := BluetoothAvrcp BluetoothMap BluetoothTest SecBluetooth MtpApplication Nfc Tag DirectShareManager
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -63,7 +63,7 @@ vendor_saved_apps := BluetoothAvrcp BluetoothMap BluetoothTest SecBluetooth MtpA
 # You need ro decode FMRadio.apk to the project directory(use apktool d FMRadio.apk) first,
 # and then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-vendor_modify_apps := Stk
+vendor_modify_apps := Stk FmRadio
 
 ##############################################################################
 # The value decides which vendor jar you want to modify.
@@ -116,7 +116,7 @@ baidu_modify_apps := Phone Settings HomePro
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode baidu system jar).
 #-----------------------------------------------------------------------------
-baidu_modify_jars := framework-yi
+baidu_modify_jars := android.policy framework-yi
 
 ##############################################################################
 # The value decides which property you will override in the build.prop.

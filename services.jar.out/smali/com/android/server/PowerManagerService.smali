@@ -13,6 +13,7 @@
         Lcom/android/server/PowerManagerService$UnsynchronizedDVFSLock;,
         Lcom/android/server/PowerManagerService$DVFSLockList;,
         Lcom/android/server/PowerManagerService$DVFSLock;,
+        Lcom/android/server/PowerManagerService$BaiduInjector;,
         Lcom/android/server/PowerManagerService$LockList;,
         Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;,
         Lcom/android/server/PowerManagerService$TimeoutTask;,
@@ -7272,7 +7273,7 @@
 
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mLcdBacklightValues:[I
 
-    invoke-direct {p0, p1, v5}, Lcom/android/server/PowerManagerService;->getAutoBrightnessValue(I[I)I
+    invoke-direct {p0, p1, v5}, Lcom/android/server/PowerManagerService;->getAutoBrightnessValueBaidu(I[I)I
 
     move-result v2
 

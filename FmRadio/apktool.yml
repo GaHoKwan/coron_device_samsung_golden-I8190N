@@ -1,0 +1,14 @@
+version: 1.5.2
+apkFileName: FmRadio.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 2
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '16'
+packageInfo:
+  cur_package: com.sec.android.app.fm
+  orig_package: com.sec.android.app.fm
+compressionType: false

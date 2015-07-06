@@ -577,7 +577,7 @@
 
     .line 365
     .local v2, bm:Landroid/graphics/Bitmap;
-    invoke-static {v2, v12, v6}, Landroid/app/WallpaperManager;->generateBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v2, v12, v6}, Landroid/app/WallpaperManager$BaiduInjector;->generateBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_3 .. :try_end_3} :catch_2
